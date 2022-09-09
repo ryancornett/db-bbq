@@ -1,8 +1,146 @@
 :root {
-    --colorbg: #E0E0E0;
+    --colorbg: #fbfbfb;
     --colornav: #F55536;
     --colormain: #412234;
-    --colorhdng: #C1AE7C;
+    --colorhdng: #e93e1c;
     --colorft: #012622;
+    --gutters: 8%;
 }
 
+@font-face {
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    src: url(local);
+}
+
+body {
+    background-color: var(--colorbg);
+}
+
+header, aside, article, section, .hours, .contact, .location, .social {
+    margin: 0 var(--gutters);
+}
+
+h1, h4, li {
+    font-family: 'Raleway';
+    color: var(--colormain);
+}
+
+h2, h3, p {
+    font-family: 'Dosis', sans-serif;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+span, a, p {
+    font-size: 1.1rem;
+}
+
+span, a {
+    font-family: 'Rubik';
+}
+
+a {
+    color: var(--colorft);
+    font-weight: bold;
+}
+
+nav {
+    background-color: var(--colornav);
+    color: white;
+    padding: 1px 0;
+    width: 100%;
+    text-align: right;
+    z-index: 1000;
+}
+
+nav > ul > li {
+    display: inline-block;
+    padding: 0 1.5rem;
+}
+
+nav > ul > li > a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav > ul > li > a:hover {
+    background-color: var(--colorhdng);
+}
+
+header {
+    margin-top: -2rem;
+}
+
+header > h1 {
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: .1rem;
+}
+
+header > p {
+    font-size: 2.5rem;
+    margin-top: .2rem;
+}
+
+.featured {    
+    text-align: center;
+}
+
+.featured > img:hover {
+    --hover: 1;
+    filter: saturate(100%);
+}
+
+.featured > img {
+    transform: scale(calc(1 + (var(--hover) * 0.02)));
+    transition: transform 0.25s;
+    box-shadow: 0 3px 6px gray;
+    opacity: 92%;
+    border-radius: 10px;
+    filter: saturate(85%);
+    width: 35%;
+}
+
+.servings {
+    font-style: italic;
+}
+
+.sides-list {
+    display: flex;
+}
+
+.sides-list > h2, .sides-list > span {
+    display: inline;
+}
+
+.bottom {
+    background-color: var(--colornav);
+    color: white;
+    padding: 10px 0;
+    margin: 2px 0;
+    text-align: center;
+}
+
+.social {
+    margin-bottom: 10px;
+}
+
+.social > a > img {
+    max-width: 15%;
+}
+
+.copyright {
+    font-family: sans-serif;
+}

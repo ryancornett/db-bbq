@@ -11,90 +11,310 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Rubik&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
         <script src="main.js" async defer></script>
+
     </head>
     <body>
         <main>
-
             <nav>
-                <!-- home, style, catering, contact -->
+                <ul class="menu">
+                    <li><a href="#home" class="menuItem">Home</a></li>
+                    <li><a href="#about-us" class="menuItem">About Us</a></li>
+                    <li><a href="#catering" class="menuItem">Catering</a></li>
+                    <li><a href="#find-us" class="menuItem">Find Us</a></li>
+                </ul>
             </nav>
 
             <header>
-
+                <h1 id="home">Danny Boone's</h1>
+                <p class="header-info">Take-Out BBQ</p>
             </header>
+
+            <div class="featured">
+                <img src="img/fulltray.jpg" alt="a tray with broccoli salad, maccaroni and cheese, smoked chicken, smoked bratwurst, 
+                spare ribs, pickles, baked beans, potato salas, and cole slaw." width="80%" />
+            </div>
 
             <section class="meats">
                 <div class="meats-list">
+                    <h2 class="menu">Meats</h2>
+                    <span class="servings"> serving/pound</span>
                     <div class="card">
+                        <h4 class="list-item">Pulled Pork</h4>
+                        <span class="prices">$6/$22</span>
+                    </div>
 
+                    <div class="card">
+                        <h4 class="list-item">Pulled Pork Nachos</h4>
+                        <span class="prices">$8/--</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Brisket</h4>
+                        <span class="prices">$8/$26</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Turkey</h4>
+                        <span class="prices">$6/$22</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Chicken Quarters</h4>
+                        <span class="prices">$7/--</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Pulled Chicken</h4>
+                        <span class="prices">$6/$22</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Spare Ribs</h4>
+                        <span class="prices">$7 half/$13 full</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Bratwurst</h4>
+                        <span class="prices">$3 each/--</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Bacon-Wrapped Stuffed Jalape&#241;os</h4>
+                        <span class="prices">$5 for 4/$22</span>
                     </div>
                 </div>
             </section>
 
             <section class="sides">
                 <div class="sides-list">
-                    <div class="card">
-                        
-                    </div>
+                    <h2 class="menu">Sides</h2>
+                    <span class="servings"> serving/family</span>
                 </div>
+                    <div class="card">
+                        <h4 class="list-item">Cole Slaw</h4>
+                        <span class="prices">$3/$11</span>
+                    </div>
+                    
+                    <div class="card">
+                        <h4 class="list-item">Mac & Cheese</h4>
+                        <span class="prices">$3/$11</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Baked Beans</h4>
+                        <span class="prices">$3/$11</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">French Fries</h4>
+                        <span class="prices">$3/$11</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Baked Potato</h4>
+                        <span class="prices">$4/--</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Potato Salad</h4>
+                        <span class="prices">$3/$11</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Garden Salad</h4>
+                        <span class="prices">$4/$14</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Broccoli Salad</h4>
+                        <span class="prices">$3/$11</span>
+                    </div>
             </section>
 
             <section class="sauces">
                 <div class="sauces-list">
+                <h3 class="sauces-header">Sauces & More</h3>
                     <div class="card">
-                        
+                        <h4 class="list-item">Original</h4>
+                        <span class="details">ketchup-based</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Carolina</h4>
+                        <span class="details">vinegar-based</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Pickles</h4>
+                        <span class="details">spear or slices</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Pickled Red Onions</h4>
+                        <span class="details">piled high</span>
                     </div>
                 </div>
             </section>
 
             <section class="breads">
-                <div class="breads">
+                <div class="bread-list">
+                <h3 class="breads-header">Breads</h3>
                     <div class="card">
-                        
+                        <h4 class="list-item">Sourdough</h4>
+                        <span class="details">toasted, with garlic-butter spread</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Burger Buns</h4>
+                        <span class="details">toasted, with butter</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Cornbread</h4>
+                        <span class="details">made in cast iron with locally sourced and ground corn meal</span>
                     </div>
                 </div>
             </section>
 
             <section class="desserts">
                 <div class="desserts-list">
+                    <h2 class="menu">Desserts</h2>
+                    <span class="servings"> serving/family</span>
                     <div class="card">
-                        
+                        <h4 class="list-item">Banana Pudding</h4>
+                        <span class="prices">$3/$11</span>
                     </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Strawberry Shortcake (seasonal)</h4>
+                        <span class="prices">$3/$11</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Bourbon Pecan Pie (seasonal)</h4>
+                        <span class="prices">$3/$11</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Hot Fudge Cake</h4>
+                        <span class="prices">$4/$14</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Peanut Butter Pie</h4>
+                        <span class="prices">$3/$11</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Ginger Sorghum Sweet Potato Pie (seasonal)</h4>
+                        <span class="prices">$3/$11</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Lemonade Pie (seasonal)</h4>
+                        <span class="prices">$3/$11</span>
+                    </div>
+
                 </div>
             </section>
             
             <section class="drinks">
-                <div class="drinks-list">
-                    <div class="card">
-                        
-                    </div>
-                </div>
+                <h3 class="drinks-header">Drinks</h3><p></p>
+                <span class="drinks-list">Sweetened Tea, Unsweetened Tea, Coke products, Ale-8-1, Sprecher Root Beer, Dr. Pepper, Lemonade</span>
+                    
             </section>
 
             <section class="specials">
                 <div class="specials-list">
+                    <h3 class="specials-header">Specials</h3>
                     <div class="card">
-                        
+                        <h4 class="list-item">Monday</h4>
+                        <span class="details">Smoked Turkey Salad Sandwiches & Garden Salads</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Tuesday</h4>
+                        <span class="details">White Smoked Turkey Chili</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Wednesday</h4>
+                        <span class="details">Pulled Pork Pinto Beans</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Thursday</h4>
+                        <span class="details">Smoked Chicken Salad Sandwiches & Garden Salads</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Friday</h4>
+                        <span class="details">Smoked Meatloaf</span>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="list-item">Saturday</h4>
+                        <span class="details">Pulled Pork Chili</span>
                     </div>
                 </div>
             </section>
         </main>
         
-        <article> <!-- history of food and family, sauce, woods -->
-            #
+        <article id="about-us">
+            <h3 class="history">About Us</h3>
+            <p class=story">Danny Boone's BBQ (named after the beloved Reuben Daniel Cornett) got its start indirectly in 2011 when Daniel got the urge to 
+            learn how to cook a rack of ribs low and slow. That first rack was not cooked adequately low or slow, and it was a disaster. Commited 
+            to discovering how to do it right, Daniel read everything he could find about smoking meat and tried again with a pork shoulder. Over the years, 
+            other meats were added to the skillset, the rubs and sauces were perfected, and many who sampled Daniel's fare urged him to sell his smoked 
+            delicacies. Thus, Danny Boone's was born.</p>
+            <p>When you eat DB's BBQ, you can taste the care and passion we put into our food. We want you not to have to worry about providing good food, 
+            but about gathering with family and friends with whom you can enjoy it. You can rest assured we use the highest quality ingredients, we take 
+            our time, and we do it right. To that end, we use pork, chicken, and beef from area farmers; seasonal vegetables from regional producers; and 
+            locally-sourced, sustainably-harvested maple, hickory, oak, pecan, black cherry, and apple woods to bring our pride to your plate.</p>
         </article>
 
-        <section> <!--catering-->
-            #
+        <section id="catering">
+            <h3>Need us to cater your event?</h3>
+            <p class="story">Whether a family reunion, wedding, birthday party, or the big game, we can take care of the food for you. Call us today at <b>(606) 
+            867-5309</b> to talk to our scheduling manager about your next event.</p>
         </section>
-
-        <aside> <!--reviews-->
-            #
-        </aside>
         
-        <footer>
-            <!-- hours, location, social media -->
+        <footer id="find-us">
+            <div class="hours">
+                <h4 class="foot">Hours</h4>
+                <p>Monday - Saturday</p>
+                <p>11:00 AM - 9:00 PM</p>
+            </div>
+
+            <div class="location">
+                <h4 class="foot">Location</h4>
+                <p>123 Smokehouse Ln</p>
+                <p>Eastern, KY 40741</p>
+            </div>
+
+            <div class="contact">
+                <h4 class="foot">Contact Us</h4>
+                <p>606-867-5309</p>
+                <p><a href="mailto:pitmaster@dannyboonesbbq.com?subject=From%20the%20DBBBQ%20website">Email Us</a></p>
+            </div>
+
+            <div class="social">
+                <h4 class="foot">Social Media</h4>
+                <a href="facebook.com"><img src="img/facebook.png"></a>
+                <a href="twitter.com"><img src="img/twitter.png"></a>
+                <a href="tiktok.com"><img src="img/tiktok.png"></a>
+                <a href="instagram.com"><img src="img/instagram.png"></a>
+            </div>
+
+            <div class="bottom">
+                <span id="date-time"></span>
+                <p class="legal"><b class="copyright">&copy;</b> <span class="legal-year" id="current-year"></span> Ryan Cornett</p>
+            </div>
         </footer>
     </body>
 </html>

@@ -3,8 +3,14 @@
     --colornav: #F55536;
     --colormain: #412234;
     --colorhdng: #e93e1c;
-    --colorft: #012622;
+    --colorft: #242601;
+    --colordiv: #dde930;
     --gutters: 8%;
+}
+
+html {
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -17,7 +23,7 @@ body {
     background-color: var(--colorbg);
 }
 
-header, aside, article, section, .hours, .contact, .location, .social {
+header, aside, article, section, .footer-row {
     margin: 0 var(--gutters);
 }
 
@@ -60,6 +66,8 @@ nav {
     color: white;
     padding: 1px 0;
     width: 100%;
+    position: fixed;
+    top: 0;
     text-align: right;
     z-index: 1000;
 }
@@ -80,7 +88,8 @@ nav > ul > li > a:hover {
 }
 
 header {
-    margin-top: -2rem;
+    margin-top: 4rem;
+    margin-left: 12%;
 }
 
 header > h1 {
@@ -92,6 +101,121 @@ header > h1 {
 header > p {
     font-size: 2.5rem;
     margin-top: .2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Begin slider CSS */
+
+.slider {
+  margin: 0 auto;
+  max-width: 1040px;
+}
+
+.slide_viewer {
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide_group {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.slide {
+  display: block;
+  text-align: center;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  background: var(--colornav);
+}
+
+.slide > img {
+    width: 80%;
+}
+
+.slide:first-child {
+  display: block;
+}
+
+.slide_buttons {
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+a.slide_btn {
+  color: var(--colormain);
+  font-size: 42px;
+  margin: 0 0.175em;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.slide_btn.active, .slide_btn:hover {
+  color: var(--colornav);
+  cursor: pointer;
+}
+
+.directional_nav {
+  height: 225px;
+  margin: 0 auto;
+  max-width: 1030px;
+  position: relative;
+  top: -340px;
+}
+
+.previous_btn {
+  bottom: 0;
+  left: 1rem;
+  margin: auto;
+  position: absolute;
+  top: 0;
+}
+
+.next_btn {
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  right: 1rem;
+  top: 0;
+}
+
+.previous_btn, .next_btn {
+  cursor: pointer;
+  height: 65px;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -ms-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+  width: 65px;
+}
+
+.previous_btn:hover, .next_btn:hover {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 767px) {
+  .previous_btn {
+    left: 50%;
+  }
+  .next_btn {
+    right: 50px;
+  }
+}
+
+/* End slider CSS */
+
+.meats {
+    margin-top: -10rem;
 }
 
 .featured {    
@@ -123,6 +247,21 @@ header > p {
 
 .sides-list > h2, .sides-list > span {
     display: inline;
+}
+
+.divider {
+    background-color: var(--colordiv);
+    height: 0.75rem;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.footer-row-item > a > img {
+    width: 15%;
 }
 
 .bottom {

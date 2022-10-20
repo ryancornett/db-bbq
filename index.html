@@ -19,79 +19,43 @@
 
     </head>
     <body>
-        <main>
-            <nav>
-                <ul class="menu">
-                    <li><a href="#home" class="menuItem">Home</a></li>
-                    <li><a href="#about-us" class="menuItem">About Us</a></li>
-                    <li><a href="#catering" class="menuItem">Catering</a></li>
-                    <li><a href="#find-us" class="menuItem">Connect</a></li>
+        <header>
+            <h1 id="home">Danny Boone's</h1>
+            <p class="header-info">Take-Out BBQ</p>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#menu" class="nav-link">Menu</a></li>
+                    <li class="nav-item"><a href="#about-us" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="#catering" class="nav-link">Catering</a></li>
+                    <li class="nav-item"><a href="#find-us" class="nav-link">Connect</a></li>
                 </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </nav>
-        
-        <div class="container">
+                
+        </header>
 
-            <header>
-                <h1 id="home">Danny Boone's</h1>
-                <p class="header-info">Take-Out BBQ</p>
-            </header>
-        </div>
             <div class="mobile-image featured">
                 <img src="img/rib-pull-away.jpg" alt="Succulent ribs awaiting a hungry diner" />
             </div>
+        
+        <div class="canvas-container">
+            <canvas id="canvas" width="32px" height="32px"></canvas>
+            <h2 class="hero-text-shadow">the flavor's in the smoke</h2>
+            <div class="position-reflection">
+                <h2 class="hero-text-reflection">the flavor's in the smoke</h2>
+            </div>
+        </div>
 
-            <!-- <div class="slider">
-                <div class="slide_viewer">
-                  <div class="slide_group">
-                    <div class="slide">
-                        <img src="img/bbq-plate-1.png" alt="A butcher paper-lined tray with sides that is focused on a pile of pulled pork." />
-                    </div>
-                    <div class="slide">
-                        <img src="img/full-tray.png" alt="A tray with sides and smoked bratwursts, ribs, & chicken." />
-                    </div>
-                    <div class="slide">
-                        <img src="img/pb-pie.png" alt="A slice of peanut butter pie topped with whipped cream and chocolate syrup." />
-                    </div>
-                    <div class="slide">
-                        <img src="img/stuffed-jalapenos.png" alt="A foil-lined baking sheet with smoked, bacon-wrapped, cream cheese stuffed jalapenos." />
-                    </div>
-                  </div>
-                </div>
-              </div><!-- End // .slider -->
-              
-              <!-- <div class="slide_buttons">
-              </div>
-              
-              <div class="directional_nav">
-                <div class="previous_btn" title="Previous">
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" height="65px" viewBox="-11 -11.5 65 66">
-                    <g>
-                      <g>
-                        <path fill="#474544" d="M-10.5,22.118C-10.5,4.132,4.133-10.5,22.118-10.5S54.736,4.132,54.736,22.118
-                          c0,17.985-14.633,32.618-32.618,32.618S-10.5,40.103-10.5,22.118z M-8.288,22.118c0,16.766,13.639,30.406,30.406,30.406 c16.765,0,30.405-13.641,30.405-30.406c0-16.766-13.641-30.406-30.405-30.406C5.35-8.288-8.288,5.352-8.288,22.118z"/>
-                        <path fill="#474544" d="M25.43,33.243L14.628,22.429c-0.433-0.432-0.433-1.132,0-1.564L25.43,10.051c0.432-0.432,1.132-0.432,1.563,0	c0.431,0.431,0.431,1.132,0,1.564L16.972,21.647l10.021,10.035c0.432,0.433,0.432,1.134,0,1.564	c-0.215,0.218-0.498,0.323-0.78,0.323C25.929,33.569,25.646,33.464,25.43,33.243z"/>
-                      </g>
-                    </g>
-                  </svg>
-                </div>
-                <div class="next_btn" title="Next">
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" height="65px" viewBox="-11 -11.5 65 66">
-                    <g>
-                      <g>
-                        <path fill="#474544" d="M22.118,54.736C4.132,54.736-10.5,40.103-10.5,22.118C-10.5,4.132,4.132-10.5,22.118-10.5	c17.985,0,32.618,14.632,32.618,32.618C54.736,40.103,40.103,54.736,22.118,54.736z M22.118-8.288	c-16.765,0-30.406,13.64-30.406,30.406c0,16.766,13.641,30.406,30.406,30.406c16.768,0,30.406-13.641,30.406-30.406 C52.524,5.352,38.885-8.288,22.118-8.288z"/>
-                        <path fill="#474544" d="M18.022,33.569c 0.282,0-0.566-0.105-0.781-0.323c-0.432-0.431-0.432-1.132,0-1.564l10.022-10.035 			L17.241,11.615c 0.431-0.432-0.431-1.133,0-1.564c0.432-0.432,1.132-0.432,1.564,0l10.803,10.814c0.433,0.432,0.433,1.132,0,1.564 L18.805,33.243C18.59,33.464,18.306,33.569,18.022,33.569z"/>
-                      </g>
-                    </g>
-                  </svg>
-                </div>
-              </div>End // .directional_nav ALL from https://codepen.io/dfitzy/pen/xZqGVo   -->
-        <div class="container">                 
+        <main>
             <section class="menu">
-                <div class="menu-header">
-                    <h2 class="menu-title">Meats</h2>
-                    <h4 class="servings"> serving/pound</h4>
-                    </div>
-                    <div class="list-card">
+                    <button class="collapsible"><h2 class="menu-title">Meats</h2></button>
+                        <div class="content">
+                        <div class="list-card">
                         <h4 class="list-item">Pulled Pork</h4>
                         <span class="details">$6/$22</span>
                     </div>
@@ -135,13 +99,12 @@
                         <h4 class="list-item">Bacon-Wrapped Stuffed Jalape&#241;os</h4>
                         <span class="details">$5 for 4/$22</span>
                     </div>
+                </div>
             </section>
 
             <section class="menu">
-                <div class="menu-header">
-                    <h2 class="menu-title">Sides</h2>
-                    <h4 class="servings"> serving/family</h4>
-                </div>
+                <button class="collapsible"><h2 class="menu-title">Sides</h2></button>
+                <div class="content">
                     <div class="list-card">
                         <h4 class="list-item">Cole Slaw</h4>
                         <span class="details">$3/$11</span>
@@ -181,12 +144,12 @@
                         <h4 class="list-item">Broccoli Salad</h4>
                         <span class="details">$3/$11</span>
                     </div>
+                </div>
             </section>
 
             <section class="menu">
-                <div class="menu-header">
-                <h2 class="menu-title">Sauces & More</h2>
-                </div>
+                <button class="collapsible"><h2 class="menu-title">Sauces & More</h2></button>
+                <div class="content">
                     <div class="list-card">
                         <h4 class="list-item">Original</h4>
                         <span class="details">ketchup-based</span>
@@ -206,12 +169,12 @@
                         <h4 class="list-item">Pickled Red Onions</h4>
                         <span class="details">great on sandwiches</span>
                     </div>
+                </div>
             </section>
 
             <section class="menu">
-                <div class="menu-header">
-                <h2 class="menu-title">Breads</h2>
-                </div>
+                <button class="collapsible"><h2 class="menu-title">Breads</h2></button>
+                <div class="content">
                     <div class="list-card">
                         <h4 class="list-item">Sourdough</h4>
                         <span class="details">toasted, with garlic-butter spread</span>
@@ -226,13 +189,12 @@
                         <h4 class="list-item">Cornbread</h4>
                         <span class="details">made in cast iron with locally sourced and ground corn meal</span>
                     </div>
+                </div>
             </section>
 
             <section class="menu">
-                <div class="menu-header">
-                    <h2 class="menu-title">Desserts</h2>
-                    <h4 class="servings"> serving/family</h4>
-                </div>
+                <button class="collapsible"><h2 class="menu-title">Desserts</h2></button>
+                <div class="content">
                     <div class="list-card">
                         <h4 class="list-item">Banana Pudding</h4>
                         <span class="details">$3/$11</span>
@@ -267,18 +229,19 @@
                         <h4 class="list-item">Lemonade Pie (seasonal)</h4>
                         <span class="details">$3/$11</span>
                     </div>
+                </div>
             </section>
             
             <section class="menu">
-                <h2 class="menu-title">Drinks</h2><p></p>
-                <span class="drinks-list">Sweetened Tea, Unsweetened Tea, Coke products, Ale-8-1, Sprecher Root Beer, Dr. Pepper, Lemonade</span>
-                    
+                <button class="collapsible"><h2 class="menu-title">Drinks</h2></button>
+                <div class="content">
+                    <span class="drinks-list">Sweetened Tea, Unsweetened Tea, Coke products, Ale-8-1, Sprecher Root Beer, Dr. Pepper, Lemonade</span>
+                </div>    
             </section>
 
             <section class="menu">
-                <div class="menu-header">
-                    <h2 class="menu-title">Specials</h2>
-                </div>
+                <button class="collapsible"><h2 class="menu-title">Specials</h2></button>
+                <div class="content">
                     <div class="list-card">
                         <h4 class="list-item">Monday</h4>
                         <span class="details">Smoked Turkey Salad Sandwiches & Garden Salads</span>
@@ -308,16 +271,15 @@
                         <h4 class="list-item">Saturday</h4>
                         <span class="details">Pulled Pork Chili</span>
                     </div>
+                </div>
             </section>
         </main>
-    </div> <!--break second container div for page margin-->
+
     <div class="mobile-image featured">
         <img src="img/smoky-ribs.jpg" alt="Three racks of smoky ribs that make your tongue slap your mouth" />
     </div>
 
-    <div class="container">
-        
-        <article id="about-us">
+    <article id="about-us">
             <h2 class="history">About Us</h2>
             <p class="story">Danny Boone's BBQ (named after the beloved Reuben Daniel Cornett) got its start indirectly in 2011 when Daniel got the urge to 
             learn how to cook a rack of ribs low and slow. That first rack was not cooked adequately low or slow, and it was a disaster. Commited 
@@ -332,47 +294,52 @@
             but about gathering with family and friends with whom you can enjoy it. You can rest assured we use the highest quality ingredients, we take 
             our time, and we do it right. To that end, we use pork, chicken, and beef from area farmers; seasonal vegetables from regional producers; and 
             locally-sourced, sustainably-harvested maple, hickory, oak, pecan, black cherry, and apple woods to bring our pride to your plate.</p>
-        </article>
-    </div>
+    </article>
     
     <div class="mobile-image featured">
         <img src="img/bbq-plate-2.png" alt="A close-up of a pulled pork sandwich with pickles and a side of potato salad" />
     </div>
 
-    <div class="container">
-        <section id="catering">
-            <h3>Need us to cater your event?</h3>
-            <p class="story">Whether a family reunion, wedding, birthday party, or the big game, we can take care of the food for you.
-                Call us at <b>(606) 867-5309</b>, email us at catering@dbbbq.com, or use the contact form below to get in touch with our
-                scheduling manager about your next event.</p>
-            <div class="contact-form">
-            <form action="#" name="contact-form">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="John Q." required>
+    <section class="catering" id="catering">
+        <h3>Need us to cater your event?</h3>
+        <p class="story">Whether a family reunion, wedding, birthday party, or the big game, we can take care of the food for you.
+            Call us at <b>(606) 867-5309</b>, email us at catering@dbbbq.com, or use the contact form below to get in touch with our
+            scheduling manager about your next event.</p>
+        <div class="contact-form">
+        <form action="#" name="contact-form">
+            <fieldset>
+                <legend class="contact-name">Name</legend>
+                    <label for="fname">First</label>
+                    <input type="text" id="fname" name="firstname" placeholder="John Q." required>
 
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Smoky" required>
+                    <label for="lname">Last</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Smoky" required>
+            </fieldset>
+            <fieldset>
+                <legend>Contact info</legend>
+                    <label for="phone">Phone number</label>
+                    <input type="phone" id="phone" name="phone" placeholder="(606) 000-0000" required>
 
-                <label for="phone">Phone number</label>
-                <input type="phone" id="phone" name="phone" placeholder="(606) 000-0000" required>
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" placeholder="johnqsmoky@dbbbq.com" required>
+            </fieldset>
+            <fieldset>
+                <legend>What do you need?</legend>
+                    <div class="contact-checkboxes">
+                        <input type="checkbox" id="catering-checkbox" name="catering-checkbox">
+                        <label for="catering-checkbox">Catering</label>
+                        <input type="checkbox" id="bulk-desserts-checkbox" name="bulk-desserts-checkbox">
+                        <label class="bulk-desserts" for="bulk-desserts-checkbox">Bulk Desserts</label>
+                    </div>
+                    <label for="subject">Additional information</label>
+                    <textarea id="subject" name="subject" placeholder="Your message..." style="height:100px" required></textarea>
+            </fieldset>
+            <input type="submit" value="Submit">
 
-                <label for="email">Email address</label>
-                <input type="email" id="email" name="email" placeholder="johnqsmoky@dbbbq.com" required>
-
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Your message..." style="height:100px" required></textarea>
-
-                <input type="submit" value="Submit">
-
-            </form>
-        </div>
-        </section>
-
+        </form>
     </div>
+    </section>
 
-        <div class="divider">
-        </div>
-        
         <footer id="find-us">
         <div class="footer-three-column">
             <div class="footer-two-column">
@@ -388,12 +355,14 @@
                 <p>Eastern, KY 40741</p>
             </div>
         </div>
-            <div class="footer-row-item social">
+            <div class="social">
                 <h4 class="foot">Social Media</h4>
+              <div class="social-media-icons">
                 <a href="facebook.com"><img src="img/facebook.png"></a>
                 <a href="twitter.com"><img src="img/twitter.png"></a>
                 <a href="tiktok.com"><img src="img/tiktok.png"></a>
                 <a href="instagram.com"><img src="img/instagram.png"></a>
+              </div>
             </div>
         </div>
 

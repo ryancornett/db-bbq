@@ -25,7 +25,7 @@ https://design.penpot.app/#/view/c6d71d80-3e91-11ed-b414-cf2300df1f4f?page-id=c6
 ## Checklist:
 - [x] Project plan features list
 - [x] Project plan wireframe with mobile, tablet, and desktop views
-- [ ] Project brief explaining the project and included features
+- [x] Project brief explaining the project and included features
 ---
 - [x] Website visually appealing
 - [x] Color palette
@@ -37,10 +37,10 @@ https://design.penpot.app/#/view/c6d71d80-3e91-11ed-b414-cf2300df1f4f?page-id=c6
 - [x] Project README file (1+ paragraph project description, features included)
 - [x] Headers, footers, and body sections
 - [x] Semantic HTML
-- [ ] Flexbox or grid page layout
+- [x] Flexbox or grid page layout
 - [ ] Best efforts for accessibility
 ---
-- [ ] Pluralsight videos
-- [ ] Informational interview
+- [x] Pluralsight videos
+- [x] Informational interview
 - [x] Tech event
-- [ ] Job readiness workshop
+- [x] Job readiness workshop

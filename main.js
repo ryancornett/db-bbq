@@ -36,12 +36,12 @@ const canvas = document.getElementById('canvas');
             }
 
             const startAnimation = function () {
-                for (x = 0; x <= 200; x++) {
-                    for (y = 0; y <= 450; y++) {
+                for (x = 0; x <= 25; x++) {
+                    for (y = 0; y <= 63; y++) {
                         color(x, y, R(x, y, -time), G(x, y, time), B(x, y, time));
                     }
                 }
-                time = time + 0.03;
+                time = time + 0.007;
                 window.requestAnimationFrame(startAnimation);
             }
 

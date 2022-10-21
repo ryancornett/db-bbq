@@ -8,6 +8,10 @@
     --gutters: 8%;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     scroll-padding-top: 6rem;
     scroll-behavior: smooth;
@@ -46,8 +50,14 @@ a {
     font-weight: bold;
 }
 
+.logo {
+    width: 140px;
+    z-index: 999;
+    margin-left: 10%;
+}
+
 nav {
-    background-color: var(--colornav);
+    background-color: var(--colorhdng);
     color: white;
     width: 100%;
     position: fixed;
@@ -127,7 +137,6 @@ nav > ul > li > a:hover {
     top: 30px;
     gap: 0;
     flex-direction: column;
-    background-color: var(--colornav);
     width: 100%;
     text-align: center;
     transition: 0.3s;
@@ -159,29 +168,10 @@ header > p {
 }
 
 .mobile-image {
-    height: 200px;
-    overflow: hidden;
+    display: none;
 }
 
-.mobile-image > img {
-    width: 100%;
-    position: relative;
-    top: -150px;
-}
-
-.featured > img:hover {
-    --hover: 1;
-    filter: saturate(100%);
-}
-
-.featured > img {
-    transform: scale(calc(1 + (var(--hover) * 0.03)));
-    transition: transform 0.25s;
-    box-shadow: 0 3px 6px gray;
-    opacity: 92%;
-    border-radius: 10px;
-    filter: saturate(85%);
-}
+/* Begin Canvas Animation and Text ****************************************** */
 
 .canvas-container {
     width: 100%;
@@ -222,37 +212,54 @@ header > p {
     opacity: 0.1;
   }
 
+  /* End Canvas Animation and Text ****************************************** */
+
+  .food-menu-title {
+    text-align: center;
+  }
+
+  .menu > button {
+    height: 2.25rem;
+    position: relative;
+    margin: 0.1em 0;
+  }
+
+  .menu-title {
+    margin: auto 0;
+  }
+  
   .collapsible {
-    background-color: #F55536;
+    background-color: var(--colornav);
     color: white;
     cursor: pointer;
-    padding: 18px;
+    padding: 0 10px;
     width: 100%;
     border: none;
     border-bottom: 1px solid white;
     text-align: left;
     outline: none;
-    font-size: 15px;
+    transition: all 0.4s ease-in-out;
   }
   
   .active, .collapsible:hover {
-    background-color: #e93e1c;
+    background-color: var(--colorhdng);
   }
   
   .collapsible:after {
     content: '\002B';
     color: white;
     font-weight: bold;
-    float: right;
-    margin-left: 5px;
+    margin: 0 0 0 96%;
+    position: absolute;
+    top: 1em;
   }
   
-  .active:after {
+  .collapsible.active:after {
     content: "\2212";
   }
   
   .content {
-    padding: 0 18px;
+    padding: 0 10px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
@@ -416,36 +423,36 @@ input[type=submit]:hover {
     font-family: sans-serif;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 800px) {
     .hamburger {
         display: none;
         cursor: pointer;
     }
-    
-    h2 {
-        font-size: 1.75rem;
-    }
-    
-    h3 {
-        font-size: 1.5rem;
-    }
-    
-    h4 {
-        font-size: 1.25rem;
-    }
-    
-    span, a, p {
-        font-size: 1.1rem;
-    }
-
-    .mobile-image {
-        display: none;
-    }
 
     .menu {
-        width: 80%;
+        width: 85%;
         margin: 0 auto;
     }
+
+    .nav-menu {
+        top: 30px;
+        left: 0;
+        margin: 0;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-content: center;
+    }
+
+    .nav-item {
+        margin: auto 1em;
+        font-size: 1.25em;
+        padding-right: 0.75em;
+    }
+
+    .nav-item:nth-of-type(5) {
+        margin-right: 10%;
+    }
+
   }
 
 
@@ -455,5 +462,30 @@ input[type=submit]:hover {
         cursor: pointer;
     }
   
- 
+    .mobile-image {
+        display: flex;
+        justify-content: space-around;
+        width: 94%;
+        margin: 1em auto;
+    }
+    
+    .mobile-image > img {
+        width: 18%;
+        height: auto;
+    }
+    
+    .featured > img:hover {
+        --hover: 1;
+        filter: saturate(100%);
+    }
+    
+    .featured > img {
+        transform: scale(calc(1 + (var(--hover) * 0.03)));
+        transition: transform 0.25s;
+        box-shadow: 0 3px 6px gray;
+        opacity: 92%;
+        border-radius: 10px;
+        filter: saturate(85%);
+    }
+    
 }

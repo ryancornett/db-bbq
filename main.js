@@ -13,6 +13,45 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
     navMenu.classList.remove("active");
 }))
 
+// Add .fixed-header-behind to header at scroll position *******************************
+
+$(window).scroll(function(){
+    if ($(this).scrollTop() > 500) {
+       $('header').addClass('fixed-header-behind');
+       $('nav').addClass('navbar-light');
+       $('.nav-link').addClass('nav-link-dark');
+       $('.logo-shift').addClass('logo-shift-black');
+    } else {
+       $('header').removeClass('fixed-header-behind');
+       $('nav').removeClass('navbar-light');
+       $('.nav-link').removeClass('nav-link-dark');
+       $('.logo-shift').removeClass('logo-shift-black');
+    }
+
+});
+
+// Random text injected into canvas ***************************************************
+
+let a = Math.floor(Math.random() * 4 + 1);
+
+switch (a) {
+  case 1:
+    document.getElementById("random").textContent = "low and slow, baby";
+    document.getElementById("random-reflection").textContent = "low and slow, baby";
+    break;
+  case 2:
+    document.getElementById("random").textContent = "the flavor's in the smoke";
+    document.getElementById("random-reflection").textContent = "the flavor's in the smoke";
+    break;
+  case 3:
+    document.getElementById("random").textContent = "get in the queue at the 'cue";
+    document.getElementById("random-reflection").textContent = "get in the queue at the 'cue";
+    break;
+  case 4:
+    document.getElementById("random").textContent = "warning: loud lip smacking ahead";
+    document.getElementById("random-reflection").textContent = "warning: loud lip smacking ahead";
+}
+
 // Animated Canvas ********************************************************************
 
 const canvas = document.getElementById('canvas');
@@ -24,24 +63,24 @@ const canvas = document.getElementById('canvas');
                 context.fillRect(x, y, 10, 10);
             }
             const R = function (x, y, time) {
-                return (Math.floor(255 + 64 * Math.cos((x * x - y * y) / 300 + time)));
+                return (Math.floor(305 + 64 * Math.cos((x * x - y * y) / 300 + time)));
             }
 
             const G = function (x, y, time) {
-                return (Math.floor(80 + 64 * Math.sin((x * x * Math.cos(time / 4) + y * y * Math.sin(time / 3)) / 300)));
+                return (Math.floor(190 + 64 * Math.sin((x * x * Math.cos(time / 4) + y * y * Math.sin(time / 3)) / 300)));
             }
 
             const B = function (x, y, time) {
-                return (Math.floor(20 + 64 * Math.sin(5 * Math.sin(time / 9) + ((x - 100) * (x - 100) + (y - 100) * (y - 100)) / 1100)));
+                return (Math.floor(15 + 64 * Math.sin(5 * Math.sin(time / 3) + ((x - 100) * (x - 100) + (y - 100) * (y - 100)) / 1100)));
             }
 
             const startAnimation = function () {
                 for (x = 0; x <= 25; x++) {
-                    for (y = 0; y <= 63; y++) {
+                    for (y = 0; y <= 50; y++) {
                         color(x, y, R(x, y, -time), G(x, y, time), B(x, y, time));
                     }
                 }
-                time = time + 0.007;
+                time = time + 0.01;
                 window.requestAnimationFrame(startAnimation);
             }
 

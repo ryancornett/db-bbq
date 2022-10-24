@@ -19,13 +19,19 @@
 
     </head>
     <body>
-        <header>
-            <h1 id="home">Danny Boone's</h1>
-            <p class="header-info">Take-Out BBQ</p>
+        <header class="fixed-header fixed-header-behind">
+                <h1>Danny Boone's</h1>
+                <p class="header-info">Take-Out BBQ</p>
+        </header>
             <nav class="navbar">
-                <img src="img/dbBBQ-logo.png" class="logo" alt="Logo for the restaurant: the letters D and B that abbreviate Danny Boone's 
+                
+                <div class="logo-shift"><img src="img/dbBBQ-logo.png" alt="Logo for the restaurant: the letters D and B that abbreviate Danny Boone's 
+                    are lowercase and positioned so that their ascending flags join. These are then styled to look like a gray firebrick chimney 
+                    with smoke rolling out the top."></div>
+                
+                <!-- <a href="#home" class="logo"><img src="img/dbBBQ-logo.png" alt="Logo for the restaurant: the letters D and B that abbreviate Danny Boone's 
                 are lowercase and positioned so that their ascending flags join. These are then styled to look like a gray firebrick chimney 
-                with smoke rolling out the top." />
+                with smoke rolling out the top."></a> -->
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="#menu" class="nav-link">Menu</a></li>
@@ -40,17 +46,14 @@
                 </div>
             </nav>
                 
-        </header>
+        
 
-            <div class="mobile-image featured">
-                <img src="img/rib-pull-away.jpg" alt="Succulent ribs awaiting a hungry diner" />
-                <img src="img/bbq-plate-2.png" alt="A close-up of a pulled pork sandwich with pickles and a side of potato salad"/>
-                <img src="img/pb-pie.png" alt="Peanut butter pie topped with chocolate syrup and whipped cream" />
-                <img src="img/bbq-plate-1.png" alt="A tray with an open-faced pulled pork sandwich in the foreground with sides in the background" />
-            </div>
+        <div class="parallax" id="home">
+            <img src="img/rib-pull-away.jpg" />
+        </div>
         
         <main id="menu">
-          <h2 class="food-menu-title">MENU</h2>
+          <h2 class="food-menu-title menu-header-drop" id="menu-header">MENU</h2>
             <section class="menu">
                     <button class="collapsible"><h2 class="menu-title">Meats</h2></button>
                         <div class="content">
@@ -94,7 +97,7 @@
                         <span class="details">$3 each/--</span>
                     </div>
 
-                    <div class="list-card">
+                    <div class="list-card last-list-card">
                         <h4 class="list-item">Bacon-Wrapped Stuffed Jalape&#241;os</h4>
                         <span class="details">$5 for 4/$22</span>
                     </div>
@@ -139,7 +142,7 @@
                         <span class="details">$4/$14</span>
                     </div>
 
-                    <div class="list-card">
+                    <div class="list-card last-list-card">
                         <h4 class="list-item">Broccoli Salad</h4>
                         <span class="details">$3/$11</span>
                     </div>
@@ -164,7 +167,7 @@
                         <span class="details">spear or slices</span>
                     </div>
 
-                    <div class="list-card">
+                    <div class="list-card last-list-card">
                         <h4 class="list-item">Pickled Red Onions</h4>
                         <span class="details">great on sandwiches</span>
                     </div>
@@ -184,7 +187,7 @@
                         <span class="details">toasted, with butter</span>
                     </div>
 
-                    <div class="list-card">
+                    <div class="list-card last-list-card">
                         <h4 class="list-item">Cornbread</h4>
                         <span class="details">made in cast iron with locally sourced and ground corn meal</span>
                     </div>
@@ -224,7 +227,7 @@
                         <span class="details">$3/$11</span>
                     </div>
 
-                    <div class="list-card">
+                    <div class="list-card last-list-card">
                         <h4 class="list-item">Lemonade Pie (seasonal)</h4>
                         <span class="details">$3/$11</span>
                     </div>
@@ -234,7 +237,7 @@
             <section class="menu">
                 <button class="collapsible"><h2 class="menu-title">Drinks</h2></button>
                 <div class="content">
-                    <span class="drinks-list">Sweetened Tea, Unsweetened Tea, Coke products, Ale-8-1, Sprecher Root Beer, Dr. Pepper, Lemonade</span>
+                    <span class="drinks-list">Sweetened Tea, Unsweetened Tea, Coke products, Ale-8-1, Sprecher Root Beer, Dr. Pepper, Lemonade</span><p></p>
                 </div>    
             </section>
 
@@ -266,7 +269,7 @@
                         <span class="details">Smoked Meatloaf</span>
                     </div>
 
-                    <div class="list-card">
+                    <div class="list-card last-list-card">
                         <h4 class="list-item">Saturday</h4>
                         <span class="details">Pulled Pork Chili</span>
                     </div>
@@ -274,7 +277,7 @@
             </section>
         </main>
 
-    <div class="mobile-image featured">
+    <div class="group-image desaturated">
         <img src="img/smoky-ribs.jpg" alt="Three racks of smoky ribs that make your tongue slap your mouth" />
         <img src="img/bbq-plate-2.png" alt="A close-up of a pulled pork sandwich with pickles and a side of potato salad" />
         <img src="img/full-tray.png" alt="A striped, wooden tray loaded with smoked meats and sides" />
@@ -290,19 +293,24 @@
             delicacies. Thus, Danny Boone's was born.</p>
             <div class="about-us-images featured">
                 <img src="img/danny-at-nh-2.jpg" alt="The legend 'Danny Boone' himself!" class="history-image" />
-                <img src="img/danny-young.jpg" alt="A young Danny with his family" class="history-image" />
+                <img src="img/rib-pull-away.jpg" alt="Ribs cooked to perfection, as evidenced by the meat pulled away from the ends of the bones" class="history-image" />
             </div>
             <p>When you eat DB's BBQ, you can taste the care and passion we put into our food. We want you not to have to worry about providing good food, 
             but about gathering with family and friends with whom you can enjoy it. You can rest assured we use the highest quality ingredients, we take 
             our time, and we do it right. To that end, we use pork, chicken, and beef from area farmers; seasonal vegetables from regional producers; and 
             locally-sourced, sustainably-harvested maple, hickory, oak, pecan, black cherry, and apple woods to bring our pride to your plate.</p>
+            <p>So come on by and pick up a plate for yourself or a platter for the family. If you hear bluegrass, folk, or old-time Appalachian music 
+            coming from the booth, we're open. There are several picnic tables beside our parking lot or in the nearby city park if you'd like to slow down 
+            and enjoy our fare outside (HIGHLY RECOMMENDED!). If you do enjoy your meal, please leave us a favorable review--or three!--on your favorite 
+            social media platforms.
+            </p>
     </article>
 
     <div class="canvas-container">
         <canvas id="canvas" width="32px" height="32px"></canvas>
-        <h2 class="hero-text-shadow">the flavor's in the smoke</h2>
+        <h2 class="hero-text-shadow" id="random"></h2>
         <div class="position-reflection">
-            <h2 class="hero-text-reflection">the flavor's in the smoke</h2>
+            <h2 class="hero-text-reflection" id="random-reflection"></h2>
         </div>
     </div>
 
@@ -314,7 +322,7 @@
         <p>Or maybe (come on, let's be honest here) you want to splurge on one of our famous desserts. Good news! You can now order 
             whole pies and family servings!</p>
 
-        <div class="contact-form">
+    <div class="contact-form">
         <form action="#" name="contact-form">
             <fieldset>
                 <legend class="contact-name">Name</legend>
@@ -344,7 +352,6 @@
                     <textarea id="subject" name="subject" placeholder="Your message..." style="height:100px" required></textarea>
             </fieldset>
             <input type="submit" value="Submit">
-
         </form>
     </div>
     </section>

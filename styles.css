@@ -3,8 +3,8 @@
     --colornav: #F55536;
     --colormain: #412234;
     --colorhdng: #e93e1c;
-    --colorft: #c59d3e;
-    --colordiv: #e6d99f;
+    --colorft: #aa8c47;
+    --colordiv: #e5d8a2;
     --gutters: 8%;
 }
 
@@ -264,7 +264,7 @@ header > p {
     content: '\002B';
     color: white;
     font-weight: bold;
-    margin: 0 0 0 96%;
+    margin: 0 0 0 94%;
     position: absolute;
     top: 1em;
   }
@@ -274,7 +274,7 @@ header > p {
   }
   
   .content {
-    padding: 0 10px;
+    padding: 0px 10px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-out;
@@ -310,6 +310,10 @@ section:last-of-type > .details {
 
 .last-list-card {
     margin-bottom: 1em;
+}
+
+.list-item {
+    padding-left: 1em;
 }
 
 .details {
@@ -353,7 +357,7 @@ article, .catering {
 .contact-form {
     padding: 12px;
 	margin: 24px auto;
-	background: var(--colordiv);
+	background: linear-gradient(var(--colordiv), #edb93f);
 	border-radius: 4px;
     max-width: 750px;
     font-family: 'Raleway', sans-serif;
@@ -604,6 +608,12 @@ input[type=submit]:hover {
         color: var(--colorbg);
         transition: all 0.3s linear;
     }
+
+    
+    .nav-link-dark:hover {
+        color: var(--colordiv);
+    }
+
 
     .logo-shift-black {
         z-index: 999;

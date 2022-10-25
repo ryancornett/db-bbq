@@ -15,10 +15,10 @@ https://design.penpot.app/#/view/c6d71d80-3e91-11ed-b414-cf2300df1f4f?page-id=c6
 ---
 
 ## Features List:
- 1. Create a responsive menu with JavaScript
- 2. Create a custom animation that animates across the screen
- 3. Create accordion boxes to display different types of information
- 4. Add your own transition animation(s) to an element on hover  
+ 1. Create a responsive menu with JavaScript *(mobile hamburger menu)*
+ 2. Create a custom animation that animates across the screen *(canvas animation with random text populated from an array)*
+ 3. Create accordion boxes to display different types of information *(food menu with meats, sides, specials, etc.)*
+ 4. Add your own transition animation(s) to an element on hover *(links change color, desaturated images saturate, and 'about-us' images expand)*  
 
 ---
   
@@ -39,7 +39,7 @@ https://design.penpot.app/#/view/c6d71d80-3e91-11ed-b414-cf2300df1f4f?page-id=c6
 - [x] Semantic HTML
 - [x] Flexbox or grid page layout
 - [x] Best efforts for accessibility
-    - I downloaded the "axe Accessibility Linter" extension for VSCode. It found ten errors: a missing lang attribute, missing alt attributes and link images with no discernible text.
+    - I downloaded the "axe Accessibility Linter" extension for VSCode. It found ten errors: a missing lang attribute, missing alt attributes, and link images with no discernible text.
     - I added the necessary lang="en" attribute to the html element, gave all images alt attributes, and gave all image-only links aria labels.
 ---
 - [x] Pluralsight videos

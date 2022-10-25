@@ -32,24 +32,30 @@ $(window).scroll(function(){
 
 // Random text injected into canvas ***************************************************
 
+const animation_Text = 
+    ["low and slow, baby",
+    "the flavor's in the smoke", 
+    "get in the queue at the 'cue", 
+    "warning: loud lip smacking ahead"];
+
 let a = Math.floor(Math.random() * 4 + 1);
 
 switch (a) {
   case 1:
-    document.getElementById("random").textContent = "low and slow, baby";
-    document.getElementById("random-reflection").textContent = "low and slow, baby";
+    document.getElementById("random").textContent = animation_Text[0];
+    document.getElementById("random-reflection").textContent = animation_Text[0];
     break;
   case 2:
-    document.getElementById("random").textContent = "the flavor's in the smoke";
-    document.getElementById("random-reflection").textContent = "the flavor's in the smoke";
+    document.getElementById("random").textContent = animation_Text[1];
+    document.getElementById("random-reflection").textContent = animation_Text[1];
     break;
   case 3:
-    document.getElementById("random").textContent = "get in the queue at the 'cue";
-    document.getElementById("random-reflection").textContent = "get in the queue at the 'cue";
+    document.getElementById("random").textContent = animation_Text[2];
+    document.getElementById("random-reflection").textContent = animation_Text[2];
     break;
   case 4:
-    document.getElementById("random").textContent = "warning: loud lip smacking ahead";
-    document.getElementById("random-reflection").textContent = "warning: loud lip smacking ahead";
+    document.getElementById("random").textContent = animation_Text[3];
+    document.getElementById("random-reflection").textContent = animation_Text[3];
 }
 
 // Animated Canvas ********************************************************************

@@ -3,8 +3,8 @@
     --colornav: #F55536;
     --colormain: #412234;
     --colorhdng: #e93e1c;
-    --colorft: #fecd5a;
-    --colordiv: #f6e5cd;
+    --colorft: #c59d3e;
+    --colordiv: #e6d99f;
     --gutters: 8%;
 }
 
@@ -13,7 +13,7 @@
 }
 
 html {
-    scroll-padding-top: 6rem;
+    scroll-padding-top: 5rem;
     scroll-behavior: smooth;
 }
 
@@ -45,7 +45,7 @@ a {
 
 .logo-shift {
     z-index: 999;
-    margin-left: 10%;
+    margin-left: 6%;
     background-image: url("img/dbBBQ-logo.png");
     background-size: 150px;
     background-position: 0em;
@@ -67,25 +67,21 @@ nav > ul > li {
 }
 
 nav > ul > li > a {
-    color: white;
+    color: var(--colorbg);
     text-decoration: none;
     text-transform: uppercase;
-}
-
-nav > ul > li > a:hover {
-    color: var(--colorft);
+    display: block;
 }
 
 .navbar {
-    background-color: var(--colornav);
-    color: white;
+    background-color: var(--colorhdng);
     width: 100%;
     position: fixed;
     top: 0;
     text-align: right;
     z-index: 1000;
     font-size: .75rem;
-    min-height: 70px;
+    min-height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,11 +96,12 @@ nav > ul > li > a:hover {
 }
 
 .nav-link {
-    transition: 0.4s ease;
+    display: block;
+    transition: 0.3s ease;
 }
 
 .nav-link:hover {
-    color: var(--colorft);
+    color: var(--colordiv);
 }
 
 .bar {
@@ -147,6 +144,8 @@ nav > ul > li > a:hover {
 
 .nav-item {
     margin: 0.9em 0;
+    display: block;
+    width: 100%;
 }
 
 .nav-menu.active {
@@ -155,7 +154,7 @@ nav > ul > li > a:hover {
 
 header {
     display: flex;
-    margin-top: 4rem;
+    margin-top: 3.5rem;
     align-items: center;
     justify-content: center;
     background-color: var(--colorbg);
@@ -164,6 +163,7 @@ header {
 header > h1 {
     font-size: 2.5em;
     font-weight: bold;
+    margin: 0.25em 0;
 }
 
 header > p {
@@ -193,7 +193,7 @@ header > p {
   }
   
   .hero-text-shadow {
-    font-size: 2.5em;
+    font-size: 1.75em;
     letter-spacing: 2px;
     color: white;
     position: absolute;
@@ -203,22 +203,28 @@ header > p {
     filter: drop-shadow(0px 2px 5px #b31e1b);
     z-index: 899;
     mix-blend-mode: darken;
+    width: 750px;
+    text-align: center;
+    text-transform: uppercase;
   }
 
   .position-reflection {
     position: absolute;
     left: 50%;
-    transform: translate(-50%, -115%);
+    transform: translate(-50%, -160%);
   }
   
   .hero-text-reflection {
-    font-size: 2.5em;
-    letter-spacing: 2.3px;
+    font-size: 1.75em;
+    letter-spacing: 2.25px;
     color: var(--colornav);
     transform: scaleY(-1) rotateX(55deg);
     z-index: 999;
     mix-blend-mode: screen;
     opacity: 0.1;
+    width: 750px;
+    text-align: center;
+    text-transform: uppercase;
   }
 
   /* End Canvas Animation and Text ****************************************** */
@@ -316,31 +322,32 @@ article, .catering {
     margin: 0 auto;
 }
 
-.about-us-images {
-    display: flex;
-}
-
-#about-us > .about-us-images {
-    margin-bottom: 2em;
+.about-us-block {
+    display: block;
+    margin-bottom: 1em;
 }
 
 .history-image {
-    width: 30%;
-    margin: 0 auto;
-    text-align: center;
-    align-items: center;
+    width: 40%;
+    min-width: 300px;
+    align-self: center;
+    display: block;
+    margin: 0 auto 1em auto;
     transform: scale(calc(1 + (var(--hover) * 0.03)));
     transition: transform 0.25s;
+}
+
+#about-us-img-hide {
+    display: none;
 }
 
 .history-image:hover {
     --hover: 1;
 }
 
-.featured > img {
+.featured{
     border-radius: 3%;
     box-shadow: 0 3px 6px gray;
-    min-width: 225px;
 }
 
 .contact-form {
@@ -359,10 +366,6 @@ label {
 
 legend {
     margin-bottom: 0.5em;
-}
-
-fieldset + fieldset {
-    margin-top: 0.5em;
 }
 
 input[type=text],input[type=phone],input[type=email], textarea {
@@ -423,9 +426,16 @@ input[type=submit]:hover {
     text-align: center;
 }
 
-.footer-two-column {
+.footer-three-column {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.foot {
+    text-align: center;
+    font-size: 1.2em;
 }
 
 .social {
@@ -461,7 +471,7 @@ input[type=submit]:hover {
     }
 
     .nav-menu {
-        top: 30px;
+        top: 23px;
         left: 0;
         margin: 0;
         flex-direction: row;
@@ -473,12 +483,33 @@ input[type=submit]:hover {
         margin: auto 1em;
         font-size: 1.25em;
         padding-right: 0.75em;
+        width: auto;
     }
 
     .nav-item:nth-of-type(5) {
-        margin-right: 10%;
+        margin-right: 5%;
     }
 
+    .about-us-block {
+        display: flex;
+        margin-bottom: 1em;
+    }
+
+    .history-image {
+        display: unset;
+        margin: 0 1em;
+    }
+
+    #about-us-img-hide {
+        display: block;
+    }
+
+    .footer-two-column {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+    }
   }
 
 @media only screen and (max-width: 876px) {
@@ -489,6 +520,21 @@ input[type=submit]:hover {
 
 
 @media only screen and (min-width: 1000px) {
+    
+    .logo-shift {
+        background-image: url("img/dbBBQ_logo_black.png");
+        transition: all 0.3s linear;
+    }
+    
+    nav > ul > li > a {
+        color: var(--colormain);
+    }
+    
+    .navbar {
+        background-color: var(--colorbg);
+        opacity: 0.75;
+    }
+    
     .hamburger {
         display: none;
         cursor: pointer;
@@ -536,7 +582,7 @@ input[type=submit]:hover {
         position: fixed;
         width: 100%;
         opacity: .75;
-        transition: opacity 0.3s linear;
+        transition: opacity 0.25s linear;
     }
 
     .fixed-header-behind {
@@ -545,21 +591,38 @@ input[type=submit]:hover {
     }
 
     .navbar-light {
-        background-color: var(--colorbg);
+        background-color: var(--colorhdng);
+        transition: all 0.25s linear;
+        opacity: 1;
+    }
+
+    .nav-link:hover {
+        color: var(--colorft);
     }
 
     .nav-link-dark {
-        color: var(--colormain);
+        color: var(--colorbg);
+        transition: all 0.3s linear;
     }
 
     .logo-shift-black {
         z-index: 999;
-        margin-left: 10%;
-        background-image: url("img/dbBBQ_logo_black.png");
+        margin-left: 6%;
+        background-image: url("img/dbBBQ-logo.png");
         background-size: 150px;
         background-position: 0em;
         background-repeat: no-repeat;
         transition: all 0.3s linear;
+    }
+    
+    .form-flex {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .form-flex >* {
+        flex: 1 1 45%;
     }
 
 }

@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,13 +25,10 @@
         </header>
             <nav class="navbar">
                 
-                <div class="logo-shift"><img src="img/dbBBQ-logo.png" alt="Logo for the restaurant: the letters D and B that abbreviate Danny Boone's 
-                    are lowercase and positioned so that their ascending flags join. These are then styled to look like a gray firebrick chimney 
-                    with smoke rolling out the top."></div>
-                
-                <!-- <a href="#home" class="logo"><img src="img/dbBBQ-logo.png" alt="Logo for the restaurant: the letters D and B that abbreviate Danny Boone's 
-                are lowercase and positioned so that their ascending flags join. These are then styled to look like a gray firebrick chimney 
-                with smoke rolling out the top."></a> -->
+                <a href="#home" class="logo-shift"><img src="img/dbBBQ-logo.png" alt="Logo for the 
+                    restaurant: the letters D and B that abbreviate Danny Boone's are lowercase and positioned so that their ascending flags 
+                    join. These are then styled to look like a gray firebrick chimney with smoke rolling out the top."></a>
+               
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="#menu" class="nav-link">Menu</a></li>
@@ -49,7 +46,7 @@
         
 
         <div class="parallax" id="home">
-            <img src="img/rib-pull-away.jpg" />
+            <img src="img/rib-pull-away.jpg" alt="Rib meat pulled away from ends of the rib bones."/>
         </div>
         
         <main id="menu">
@@ -286,24 +283,21 @@
 
     <article id="about-us">
             <h2 class="history">About Us</h2>
+            <div class="about-us-block">
             <p class="story">Danny Boone's BBQ (named after the beloved Reuben Daniel Cornett) got its start indirectly in 2011 when Daniel got the urge to 
             learn how to cook a rack of ribs low and slow. That first rack was not cooked adequately low or slow, and it was a disaster. Commited 
             to discovering how to do it right, Daniel read everything he could find about smoking meat and tried again with a pork shoulder. Over the years, 
             other meats were added to the skillset, the rubs and sauces were perfected, and many who sampled Daniel's fare urged him to sell his smoked 
             delicacies. Thus, Danny Boone's was born.</p>
-            <div class="about-us-images featured">
-                <img src="img/danny-at-nh-2.jpg" alt="The legend 'Danny Boone' himself!" class="history-image" />
-                <img src="img/rib-pull-away.jpg" alt="Ribs cooked to perfection, as evidenced by the meat pulled away from the ends of the bones" class="history-image" />
+                <img src="img/danny-at-nh-2.jpg" alt="The legend 'Danny Boone' himself!" class="history-image featured" />
             </div>
-            <p>When you eat DB's BBQ, you can taste the care and passion we put into our food. We want you not to have to worry about providing good food, 
-            but about gathering with family and friends with whom you can enjoy it. You can rest assured we use the highest quality ingredients, we take 
-            our time, and we do it right. To that end, we use pork, chicken, and beef from area farmers; seasonal vegetables from regional producers; and 
-            locally-sourced, sustainably-harvested maple, hickory, oak, pecan, black cherry, and apple woods to bring our pride to your plate.</p>
-            <p>So come on by and pick up a plate for yourself or a platter for the family. If you hear bluegrass, folk, or old-time Appalachian music 
-            coming from the booth, we're open. There are several picnic tables beside our parking lot or in the nearby city park if you'd like to slow down 
-            and enjoy our fare outside (HIGHLY RECOMMENDED!). If you do enjoy your meal, please leave us a favorable review--or three!--on your favorite 
-            social media platforms.
-            </p>
+            <div class="about-us-block">
+                <img src="img/rib-pull-away.jpg" id="about-us-img-hide" alt="Ribs cooked to perfection, as evidenced by the meat pulled away from the ends of the bones" class="history-image featured" />
+                <p>DB's BBQ uses pork, chicken, and beef from area farmers; seasonal vegetables from regional producers; and locally-sourced, 
+                sustainably-harvested maple, hickory, oak, pecan, black cherry, and apple woods to bring our pride to your plate.
+                So come on by and pick up a plate for yourself or a platter for the family. There are several picnic tables beside our lot or in
+                the nearby city park if you'd like to slow down and enjoy our fare outside.</p>
+            </div>
     </article>
 
     <div class="canvas-container">
@@ -324,6 +318,7 @@
 
     <div class="contact-form">
         <form action="#" name="contact-form">
+            <div class="form-flex">
             <fieldset>
                 <legend class="contact-name">Name</legend>
                     <label for="fname">First</label>
@@ -340,6 +335,7 @@
                     <label for="email">Email address</label>
                     <input type="email" id="email" name="email" placeholder="johnqsmoky@dbbbq.com" required>
             </fieldset>
+            <div class="form-one-child">
             <fieldset>
                 <legend>What do you need?</legend>
                     <div class="contact-checkboxes">
@@ -352,6 +348,8 @@
                     <textarea id="subject" name="subject" placeholder="Your message..." style="height:100px" required></textarea>
             </fieldset>
             <input type="submit" value="Submit">
+            </div>
+        </div>
         </form>
     </div>
     </section>
@@ -374,10 +372,10 @@
             <div class="social">
                 <h4 class="foot">Social Media</h4>
               <div class="social-media-icons">
-                <a href="facebook.com"><img src="img/facebook.png"></a>
-                <a href="twitter.com"><img src="img/twitter.png"></a>
-                <a href="tiktok.com"><img src="img/tiktok.png"></a>
-                <a href="instagram.com"><img src="img/instagram.png"></a>
+                <a href="facebook.com" aria-label="Facebook logo"><img src="img/facebook.png" alt="Facebook logo"></a>
+                <a href="twitter.com" aria-label="Twitter logo"><img src="img/twitter.png" alt="Twitter logo"></a>
+                <a href="tiktok.com" aria-label="TikTok logo"><img src="img/tiktok.png" alt="TikTok logo"></a>
+                <a href="instagram.com" aria-label="Instagram logo"><img src="img/instagram.png" alt="Instagram logo"></a>
               </div>
             </div>
         </div>

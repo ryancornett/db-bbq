@@ -173,6 +173,10 @@ header > p {
   display: none;
 }
 
+.review {
+  display: none;
+}
+
 .group-image {
   display: none;
 }
@@ -559,6 +563,7 @@ input[type=submit]:hover {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
   .fixed-header {
     position: fixed;
     width: 100%;
@@ -593,6 +598,35 @@ input[type=submit]:hover {
     background-repeat: no-repeat;
     transition: all 0.3s linear;
   }
+
+  .review {
+    display: block;
+    position: absolute;
+    left: 59%;
+    top: 275px;
+    width: 35%;
+  }
+
+  .review > h2 {
+    position: relative;
+    color: var(--colordiv);
+    font-size: 3em;
+    margin: 0;
+  }
+
+  .review > .stars {
+    text-align: center;
+    margin-top: -0.25em;
+  }
+
+  .review > h3 {
+    position: relative;
+    color: var(--colordiv);
+    font-size: 2em;
+    text-align: right;
+    margin: -0.25em 1em 0 0;
+  }
+
   .form-flex {
     display: flex;
     justify-content: space-around;

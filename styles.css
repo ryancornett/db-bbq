@@ -169,7 +169,7 @@ header > p {
   margin: 0.75rem 0 0 1rem;
 }
 
-.parallax > img {
+.bg-100vh > img {
   display: none;
 }
 
@@ -212,7 +212,7 @@ canvas {
 .position-reflection {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -160%);
+  transform: translate(-50%, -153%);
 }
 
 .hero-text-reflection {
@@ -296,6 +296,7 @@ button {
 .content > .list-card:nth-of-type(even) {
   background-color: var(--colordiv);
 }
+
 
 section:last-of-type > .details {
   padding: 2rem;
@@ -471,10 +472,7 @@ input[type=submit]:hover {
     display: none;
     cursor: pointer;
   }
-  .menu {
-    width: 90%;
-    margin: 0 auto;
-  }
+
   .nav-menu {
     top: 23px;
     left: 0;
@@ -531,6 +529,12 @@ input[type=submit]:hover {
     display: none;
     cursor: pointer;
   }
+
+  .menu {
+    width: 70%;
+    margin: 0 auto;
+  }
+
   .group-image {
     display: flex;
     width: auto;
@@ -549,13 +553,13 @@ input[type=submit]:hover {
     opacity: 80%;
     filter: saturate(10%);
   }
-  .parallax > img {
+  .bg-100vh > img {
     display: block;
     /*Put something in the div for the background-image to cover, then give it zero opacity*/
     opacity: 0;
     height: 99vh;
   }
-  .parallax {
+  .bg-100vh {
     background-image: url("img/bw-pit.jpg");
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -569,6 +573,7 @@ input[type=submit]:hover {
     width: 100%;
     opacity: 0.8;
     transition: opacity 0.25s linear;
+    z-index: 699;
   }
   .fixed-header-behind {
     opacity: 0;
@@ -599,12 +604,20 @@ input[type=submit]:hover {
     transition: all 0.3s linear;
   }
 
+  .parallax {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
   .review {
     display: block;
     position: absolute;
     left: 59%;
     top: 275px;
     width: 35%;
+    z-index: 599;
   }
 
   .review > h2 {
@@ -625,6 +638,15 @@ input[type=submit]:hover {
     font-size: 2em;
     text-align: right;
     margin: -0.25em 1em 0 0;
+  }
+  
+  .catering {
+    display: flex;
+  }
+
+  .we-cater {
+    width: 80%;
+    margin-right: 2em;
   }
 
   .form-flex {

@@ -41,13 +41,14 @@ $(window).scroll(function(){
 
 // Random text canvas display
 
-const animation_Text = 
-    ["low and slow, baby",
-    "the flavor's in the smoke", 
-    "get in the queue at the 'cue", 
-    "warning: loud lip smacking ahead"];
+let animation_Text = 
+    ['low and slow, baby',
+    'the flavor\'s is in the smoke', 
+    'get in the queue at the \'cue', 
+    'warning: loud lip smacking ahead',
+    'self, you deserve a rib platter'];
 
-let a = Math.floor(Math.random() * 4 + 1);
+let a = Math.floor(Math.random() * 5 + 1);
 
 function displayText() {
     document.getElementById("random").textContent = animation_Text[a - 1];
@@ -55,7 +56,7 @@ function displayText() {
 }
 
 for (let j = 0; j < animation_Text.length; j++) {
-    if (j == a) {
+    if (j === a) {
         displayText();
     } else {}
 };

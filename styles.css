@@ -37,6 +37,10 @@ a {
   font-weight: bold;
 }
 
+main {
+  z-index: 999;
+}
+
 .logo {
   z-index: 999;
   margin-left: 10%;
@@ -78,7 +82,7 @@ nav > ul > li > a {
   position: fixed;
   top: 0;
   text-align: right;
-  z-index: 1000;
+  z-index: 1999;
   font-size: 0.75rem;
   min-height: 50px;
   display: flex;
@@ -254,6 +258,7 @@ canvas {
   text-align: left;
   outline: none;
   transition: all 0.4s ease-in-out;
+  z-index: 1000;
 }
 
 .active, .collapsible:hover {
@@ -361,6 +366,8 @@ article, .catering {
   border-radius: 4px;
   max-width: 750px;
   font-family: "Raleway", sans-serif;
+  border-radius: 2%;
+  box-shadow: 0 3px 8px 2px rgb(139, 139, 139);
 }
 
 label {
@@ -573,7 +580,7 @@ input[type=submit]:hover {
     width: 100%;
     opacity: 0.8;
     transition: opacity 0.25s linear;
-    z-index: 699;
+    z-index: 999;
   }
   .fixed-header-behind {
     opacity: 0;
@@ -657,4 +664,4 @@ input[type=submit]:hover {
   .form-flex > * {
     flex: 1 1 45%;
   }
-}/*# sourceMappingURL=styles.css.map */
+}

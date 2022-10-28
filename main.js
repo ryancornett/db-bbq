@@ -16,7 +16,7 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
 // Add/remove classes based on scroll position
 
 const scrlDef = 
-    ['header',
+    ['.fixed-header',
     'nav',
     '.nav-link',
     '.logo-shift'];
@@ -48,15 +48,15 @@ let animation_Text =
     'warning: loud lip smacking ahead',
     'self, you deserve a rib platter'];
 
-let a = Math.floor(Math.random() * 5 + 1);
+let ranNum = Math.floor(Math.random() * 5 + 1);
 
 function displayText() {
-    document.getElementById("random").textContent = animation_Text[a - 1];
-    document.getElementById("random-reflection").textContent = animation_Text[a - 1];
+    document.getElementById("random").textContent = animation_Text[ranNum - 1];
+    document.getElementById("random-reflection").textContent = animation_Text[ranNum - 1];
 }
 
 for (let j = 0; j < animation_Text.length; j++) {
-    if (j === a) {
+    if (j == ranNum) {
         displayText();
     } else {}
 };
@@ -64,44 +64,44 @@ for (let j = 0; j < animation_Text.length; j++) {
 // Animated canvas customized from: https://dev.to/jordienr/how-to-make-animated-gradients-like-stripe-56nh
 
 const canvas = document.getElementById('canvas');
-            const context = canvas.getContext('2d');
-            let time = 0;
+    const context = canvas.getContext('2d');
+    let time = 0;
 
-            const color = function (x, y, r, g, b) {
-                context.fillStyle = `rgb(${r}, ${g}, ${b})`
-                context.fillRect(x, y, 10, 10);
-            }
-            const R = function (x, y, time) {
-                return (Math.floor(305 + 64 * Math.cos((x * x - y * y) / 300 + time)));
-            }
+    const color = function (x, y, r, g, b) {
+        context.fillStyle = `rgb(${r}, ${g}, ${b})`
+        context.fillRect(x, y, 10, 10);
+    }
+    const R = function (x, y, time) {
+        return (Math.floor(305 + 64 * Math.cos((x * x - y * y) / 300 + time)));
+    }
 
-            const G = function (x, y, time) {
-                return (Math.floor(190 + 64 * Math.sin((x * x * Math.cos(time / 4) + y * y * Math.sin(time / 3)) / 300)));
-            }
+    const G = function (x, y, time) {
+        return (Math.floor(190 + 64 * Math.sin((x * x * Math.cos(time / 4) + y * y * Math.sin(time / 3)) / 300)));
+    }
 
-            const B = function (x, y, time) {
-                return (Math.floor(15 + 64 * Math.sin(5 * Math.sin(time / 3) + ((x - 100) * (x - 100) + (y - 100) * (y - 100)) / 1100)));
-            }
+    const B = function (x, y, time) {
+        return (Math.floor(15 + 64 * Math.sin(5 * Math.sin(time / 3) + ((x - 100) * (x - 100) + (y - 100) * (y - 100)) / 1100)));
+    }
 
-            const startAnimation = function () {
-                for (x = 0; x <= 25; x++) {
-                    for (y = 0; y <= 50; y++) {
-                        color(x, y, R(x, y, -time), G(x, y, time), B(x, y, time));
-                    }
-                }
-                time = time + 0.01;
-                window.requestAnimationFrame(startAnimation);
+    const startAnimation = function () {
+        for (x = 0; x <= 25; x++) {
+            for (y = 0; y <= 50; y++) {
+                color(x, y, R(x, y, -time), G(x, y, time), B(x, y, time));
             }
+        }
+        time = time + 0.01;
+        window.requestAnimationFrame(startAnimation);
+    }
 
-            startAnimation();
+    startAnimation();
 
 // Accordion Boxes customized from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_symbol
 
 let coll = document.getElementsByClassName("collapsible");
-let i;
+let k;
 
-for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
+for (k = 0; k < coll.length; k++) {
+    coll[k].addEventListener("click", function() {
     this.classList.toggle("active");
     let content = this.nextElementSibling;
     if (content.style.maxHeight){

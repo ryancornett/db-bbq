@@ -41,22 +41,22 @@ $(window).scroll(function(){
 
 // Random text canvas display
 
-let animation_Text = 
+let animation_text = 
     ['low and slow, baby',
     'the flavor\'s is in the smoke', 
     'get in the queue at the \'cue', 
     'warning: loud lip smacking ahead',
     'self, you deserve a rib platter'];
 
-let ranNum = Math.floor(Math.random() * 5 + 1);
+let ran_num = Math.floor(Math.random() * 5);
 
 function displayText() {
-    document.getElementById("random").textContent = animation_Text[ranNum - 1];
-    document.getElementById("random-reflection").textContent = animation_Text[ranNum - 1];
+    document.getElementById("random").textContent = animation_text[ran_num];
+    document.getElementById("random-reflection").textContent = animation_text[ran_num];
 }
 
-for (let j = 0; j < animation_Text.length; j++) {
-    if (j == ranNum) {
+for (let j = 0; j < animation_text.length; j++) {
+    if (j == ran_num) {
         displayText();
     } else {}
 };

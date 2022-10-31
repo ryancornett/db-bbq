@@ -13,22 +13,42 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
     navMenu.classList.remove("active");
 }))
 
+// Adapted from https://codepen.io/escapetomars/pen/EeLmpp
+
+function parallax_name() {
+	let s = document.getElementById("name-wrapper");
+    let yPos = 0 - window.scrollY/12;	
+    s.style.top = 24.6 - yPos + "%";
+}
+
+window.addEventListener("scroll", function(){
+	parallax_name();	
+});
+
+function parallax() {
+	let s = document.getElementById("object-wrapper");
+    let yPos = 0 - window.scrollY/22;	
+    s.style.top = 30.2 - yPos + "%";
+}
+
+window.addEventListener("scroll", function(){
+	parallax();	
+});
+
 // Add/remove classes based on scroll position
 
 const scrlDef = 
-    ['.fixed-header',
-    'nav',
+    ['nav',
     '.nav-link',
     '.logo-shift'];
 
 const scrlAlt = 
-    ['fixed-header-behind',
-    'navbar-light',
+    ['navbar-light',
     'nav-link-dark',
     'logo-shift-black'];
 
 $(window).scroll(function(){
-    if ($(this).scrollTop() > 500) {
+    if ($(this).scrollTop() > 580) {
         for (let i = 0; i < scrlDef.length; i++) {
             $(scrlDef[i]).addClass(scrlAlt[i]);
         }
@@ -43,7 +63,7 @@ $(window).scroll(function(){
 
 let animation_text = 
     ['low and slow, baby',
-    'the flavor\'s is in the smoke', 
+    'the flavor\'s in the smoke', 
     'get in the queue at the \'cue', 
     'warning: loud lip smacking ahead',
     'self, you deserve a rib platter'];

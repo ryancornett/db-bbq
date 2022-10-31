@@ -15,41 +15,46 @@
 
     </head>
     <body>
-        <header class="fixed-header">
-                <h1>Danny Boone's</h1>
-                <p>Take-Out BBQ</p>
-        </header>
-            <nav class="navbar">
-                
-                <a href="#home" class="logo-shift"><img src="img/dbBBQ-logo.png" alt="Logo for the 
-                    restaurant: the letters D and B that abbreviate Danny Boone's are lowercase and positioned so that their ascending flags 
-                    join. These are then styled to look like a gray firebrick chimney with smoke rolling out the top."></a>
-               
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#menu" class="nav-link">Menu</a></li>
-                    <li class="nav-item"><a href="#about-us" class="nav-link">About Us</a></li>
-                    <li class="nav-item"><a href="#catering" class="nav-link">Catering</a></li>
-                    <li class="nav-item"><a href="#find-us" class="nav-link">Connect</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
+        
+        
+        <nav class="navbar">
+            <a href="#home" class="logo-shift"><img src="img/dbBBQ-logo.png" alt="Logo for the 
+                restaurant: the letters D and B that abbreviate Danny Boone's are lowercase and positioned so that their ascending flags 
+                join. These are then styled to look like a gray firebrick chimney with smoke rolling out the top."></a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#menu" class="nav-link">Menu</a></li>
+                <li class="nav-item"><a href="#about-us" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="#catering" class="nav-link">Catering</a></li>
+                <li class="nav-item"><a href="#find-us" class="nav-link">Connect</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
                 
         <div class="bg-100vh" id="home">
             <img src="img/rib-pull-away.jpg" alt="Rib meat pulled away from ends of the rib bones."/>
         </div>
 
-        <div class="review object-wrapper">
+        <div class="name" id="name-wrapper">
+            <h2 class="main-name"><h2 class="review-text stars">&#9733 &#9733 &#9733 &#9733 &#9733</h2></h2>
+        </div>
+
+        <div class="review" id="object-wrapper">
                     <h2 class="review-text speed-1">"All other BBQ joints should probably just close."</h2>
-                    <h2 class="review-text stars">&#9733 &#9733 &#9733 &#9733 &#9733</h2>
+                    <!-- <h2 class="review-text stars">&#9733 &#9733 &#9733 &#9733 &#9733</h2> -->
                     <h3 class="review-source">- Pitmaster Monthly</h3>
         </div>
 
         <main id="menu">
+            <header>
+                <h1>Danny Boone's</h1>
+                <p>Take-Out BBQ</p>
+            </header>
           <h2 class="food-menu-title">MENU</h2>
             <section class="menu">
                     <button class="collapsible"><h2 class="menu-title">Meats</h2></button>
@@ -309,7 +314,8 @@
 
                     <div class="list-card last-list-card">
                         <h4 class="list-item">Lemonade Pie (seasonal)</h4>
-                        <p class="list-item">A sunny, summertime treat! Reminiscent of Key lime pie, this creamy offering is sure to refresh and delight. 
+                        <p class="list-item">A sunny, summertime treat! Reminiscent of Key lime pie, this creamy offering with its hint of mint in 
+                            every bite is sure to refresh and delight. 
                             June-August.
                         </p>
                         <span class="details">$3/$11</span>

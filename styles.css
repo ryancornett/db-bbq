@@ -14,7 +14,7 @@
 }
 
 html {
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 4.75rem;
   scroll-behavior: smooth;
 }
 
@@ -156,7 +156,7 @@ nav > ul > li > a {
 
 header {
   display: flex;
-  margin-top: 6em;
+  margin-top: 0;
   align-items: center;
   justify-content: center;
   background-color: var(--colordiv);
@@ -462,6 +462,13 @@ input[type=submit]:hover {
 .social-media-icons > a > img {
   max-width: 70%;
   flex: 1 1 100px;
+  filter: grayscale(100%);
+  transition: all 0.2s ease-in-out;
+}
+
+.social-media-icons > a:hover > img {
+  filter: grayscale(0%);
+  transition: all 0.2s ease-in-out;
 }
 
 .copyright {
@@ -535,6 +542,7 @@ input[type=submit]:hover {
   .navbar {
     background-color: var(--colorbg);
     opacity: 0.75;
+    transition: all 0.25s linear;
   }
   .hamburger {
     display: none;
@@ -557,9 +565,10 @@ input[type=submit]:hover {
   }
   .desaturated > img:hover {
     filter: saturate(100%);
+    transition: all 0.3s ease-in-out;
   }
   .desaturated > img {
-    transition: all 0.25s ease;
+    transition: all 0.3s ease-in-out;
     box-shadow: 0 3px 6px gray;
     opacity: 80%;
     filter: saturate(10%);
@@ -568,7 +577,7 @@ input[type=submit]:hover {
     display: block;
     /*Put something in the div for the background-image to cover, then give it zero opacity*/
     opacity: 0;
-    height: 99vh;
+    height: 90vh;
   }
   .bg-100vh {
     background-image: url("img/bw-pit.jpg");
@@ -579,17 +588,6 @@ input[type=submit]:hover {
     background-size: cover;
   }
 
-  .fixed-header {
-    position: fixed;
-    width: 100%;
-    opacity: 0.8;
-    transition: opacity 0.25s linear;
-    z-index: 999;
-  }
-  .fixed-header-behind {
-    opacity: 0;
-    transition: opacity 0.25s linear;
-  }
   .navbar-light {
     background-color: var(--colorhdng);
     transition: all 0.25s linear;
@@ -622,13 +620,29 @@ input[type=submit]:hover {
     overflow-y: auto;
   }
 
+  .name {
+    display: block;
+    position: absolute;
+    left: 16%;
+    top: 175px;
+    width: 35%;
+    z-index: 1;
+  }
+
+  .name > h2 {
+    position: relative;
+    color: var(--colordiv);
+    font-size: 6em;
+    margin: 0;
+  }
+
   .review {
     display: block;
     position: absolute;
     left: 59%;
-    top: 275px;
+    top: 215px;
     width: 35%;
-    z-index: 599;
+    z-index: 1;
   }
 
   .review > h2 {

@@ -18,7 +18,7 @@ https://design.penpot.app/#/view/c6d71d80-3e91-11ed-b414-cf2300df1f4f?page-id=c6
  1. Create a responsive menu with JavaScript *(mobile hamburger menu)*
  2. Create a custom animation that animates across the screen *(canvas animation with random text populated from an array)*
  3. Create accordion boxes to display different types of information *(food menu with meats, sides, specials, etc.)*
- 4. Add your own transition animation(s) to an element on hover *(links change color, desaturated images saturate, and 'about-us' images expand)*  
+ 4. Add your own transition animation(s) to an element on hover *(links change color, de-saturated images saturate, and 'about-us' images expand)*  
 
 ---
   

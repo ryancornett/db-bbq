@@ -235,6 +235,7 @@ canvas {
 /* End Canvas Animation and Text ****************************************** */
 .food-menu-title {
   text-align: center;
+  color: var(--colormain);
 }
 
 .menu > button {
@@ -279,6 +280,8 @@ canvas {
 }
 
 .content {
+  display: block;
+  color: var(--colormain);
   padding: 0px 10px;
   max-height: 0;
   overflow: hidden;
@@ -290,27 +293,15 @@ button {
   font-weight: 600;
 }
 
-/* *********************
-********************* */
 .menu-header {
   display: flex;
   align-items: flex-end;
   margin-bottom: -1rem;
 }
 
-.content > .list-card:nth-of-type(even) {
-  background-color: var(--colordiv);
-}
-
-
-section:last-of-type > .details {
-  padding: 2rem;
-}
-
-.list-card {
-  display: flex;
-  align-items: center;
-  margin: -1rem 0;
+.list-card > h4 {
+  font-size: 1.1rem;
+  padding-left: 0.82em;
 }
 
 .last-list-card {
@@ -319,11 +310,14 @@ section:last-of-type > .details {
 
 .list-item {
   padding-left: 1em;
+  font-size: 0.9rem;
 }
 
 .details {
   font-style: italic;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
+  padding-bottom: 1rem;
+  color: var(--colorft);
 }
 
 article, .catering {
@@ -497,6 +491,16 @@ input[type=submit]:hover {
   .nav-item:nth-of-type(5) {
     margin-right: 5%;
   }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .list-card {
+    width: 49%;
+  }
+
   .about-us-block {
     display: flex;
     margin-bottom: 1em;

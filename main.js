@@ -92,24 +92,24 @@ const canvas = document.getElementById('canvas');
         context.fillRect(x, y, 10, 10);
     }
     const R = function (x, y, time) {
-        return (Math.floor(305 + 64 * Math.cos((x * x - y * y) / 300 + time)));
+        return (Math.floor(315 + 64 * Math.cos((x * x - y * y) / 300 + time)));
     }
 
     const G = function (x, y, time) {
-        return (Math.floor(190 + 64 * Math.sin((x * x * Math.cos(time / 4) + y * y * Math.sin(time / 3)) / 300)));
+        return (Math.floor(150 + 64 * Math.sin((x * x * Math.cos(time / 4) + y * y * Math.sin(time / 3)) / 270)));
     }
 
     const B = function (x, y, time) {
-        return (Math.floor(15 + 64 * Math.sin(5 * Math.sin(time / 3) + ((x - 100) * (x - 100) + (y - 100) * (y - 100)) / 1100)));
+        return (Math.floor(-15 + 64 * Math.sin(5 * Math.cos(time / 3) + ((x - 100) * (x - 100) + (y - 100) * (y - 100)) / 1100)));
     }
 
     const startAnimation = function () {
         for (x = 0; x <= 25; x++) {
-            for (y = 0; y <= 50; y++) {
+            for (y = 0; y <= 40; y++) {
                 color(x, y, R(x, y, -time), G(x, y, time), B(x, y, time));
             }
         }
-        time = time + 0.01;
+        time = time + 0.02;
         window.requestAnimationFrame(startAnimation);
     }
 

@@ -119,6 +119,7 @@ nav > ul > li > a {
 .hamburger {
   display: block;
   margin: 0 1.5em 0 auto;
+  cursor: pointer;
 }
 
 .hamburger.active > .bar:nth-child(2) {
@@ -531,6 +532,7 @@ input[type=submit]:hover {
     display: none;
   }
 }
+
 @media only screen and (min-width: 1000px) {
   .logo-shift {
     background-image: url("img/dbBBQ_logo_black.png");
@@ -632,7 +634,7 @@ input[type=submit]:hover {
   .name > h2 {
     position: relative;
     color: var(--colordiv);
-    font-size: 6em;
+    font-size: 4em;
     margin: 0;
   }
 
@@ -648,7 +650,7 @@ input[type=submit]:hover {
   .review > h2 {
     position: relative;
     color: var(--colordiv);
-    font-size: 3em;
+    font-size: 2em;
     margin: 0;
   }
 
@@ -660,7 +662,7 @@ input[type=submit]:hover {
   .review > h3 {
     position: relative;
     color: var(--colordiv);
-    font-size: 2em;
+    font-size: 1.75em;
     text-align: right;
     margin: -0.25em 1em 0 0;
   }
@@ -681,5 +683,20 @@ input[type=submit]:hover {
   }
   .form-flex > * {
     flex: 1 1 45%;
+  }
+}
+
+
+@media only screen and (min-width: 1450px) {
+  .review > h2 {
+    font-size: 3em;
+  }
+
+  .review > h3 {
+    font-size: 2.5em;
+  }
+
+  .name > h2 {
+    font-size: 5.75em;
   }
 }

@@ -40,9 +40,24 @@ https://design.penpot.app/#/view/c6d71d80-3e91-11ed-b414-cf2300df1f4f?page-id=c6
 - [x] Flexbox or grid page layout
 - [x] Best efforts for accessibility
     - I downloaded the "axe Accessibility Linter" extension for VSCode. It found ten errors: a missing lang attribute, missing alt attributes, and link images with no discernible text.
-    - I added the necessary lang="en" attribute to the html element, gave all images alt attributes, and gave all image-only links aria labels.
+    - I added the necessary lang="en" attribute to the html element, gave all images alt attributes, and gave all image-only links aria labels.  
+  
+I ran the accessiBe.com accessScan on my GitHub Pages site. My site was marked "Compliant! Great work, you are compliant with the WCAG 2.1 level AA"  
+   
+I ran the web.dev PageSpeed Insights report on my GitHub Pages site and received the following scores:  
+- Mobile
+    - Performance: 92
+    - Accessibility: 96
+    - Best Practices: 92
+    - SEO: 92
+- Desktop
+    - Performance: 97
+    - Accessibility: 96
+    - Best Practices: 92
+    - SEO: 90
 ---
 - [x] Pluralsight videos
 - [x] Informational interview
 - [x] Tech event
-- [x] Job readiness workshop
+- [x] Job readiness workshop  
+  

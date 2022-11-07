@@ -17,7 +17,7 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
 
 function parallax_name() {
 	let s = document.getElementById("name-wrapper");
-    let yPos = 0 - window.scrollY/12;	
+    let yPos = 0 - window.scrollY/13.5;	
     s.style.top = 24.6 - yPos + "%";
 }
 
@@ -27,7 +27,7 @@ window.addEventListener("scroll", function(){
 
 function parallax() {
 	let s = document.getElementById("object-wrapper");
-    let yPos = 0 - window.scrollY/22;	
+    let yPos = 0 - window.scrollY/25;	
     s.style.top = 30.2 - yPos + "%";
 }
 

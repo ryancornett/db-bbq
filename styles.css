@@ -2,11 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap");
 :root {
   --colorbg: #fbfbfb;
-  --colornav: #F55536;
-  --colormain: #412234;
-  --colorhdng: #e93e1c;
-  --colorft: #aa8c47;
-  --colordiv: #e5d8a2;
+  --colornav: #cc482e;
+  --colormain: #331f22;
+  --colorhdng: #b6422b;
+  --colorft: #8d7235;
+  --colordiv: #fde99b;
 }
 
 * {

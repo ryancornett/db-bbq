@@ -42,7 +42,8 @@ https://design.penpot.app/#/view/c6d71d80-3e91-11ed-b414-cf2300df1f4f?page-id=c6
     - I downloaded the "axe Accessibility Linter" extension for VSCode. It found ten errors: a missing lang attribute, missing alt attributes, and link images with no discernible text.
     - I added the necessary lang="en" attribute to the html element, gave all images alt attributes, and gave all image-only links aria labels.  
   
-I ran the accessiBe.com accessScan on my GitHub Pages site. My site was marked "Compliant! Great work, you are compliant with the WCAG 2.1 level AA"  
+I ran the accessiBe.com accessScan on my GitHub Pages site. My site was marked "Compliant! Great work, you are compliant with the WCAG 2.1 level AA."  
+I did make changes to the colors to achieve a contrast ratio of 4.5, but the scan after doing so showed issues remained with contrast. I couldn't figure out why. I also added "aria-required" attributes to form fields, added a "role" attribute to an empty span element given textContent with JavaScript, and added a hidden link that skips navigation.
    
 I ran the web.dev PageSpeed Insights report on my GitHub Pages site and received the following scores:  
 - Mobile

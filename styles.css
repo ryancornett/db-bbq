@@ -41,6 +41,24 @@ main {
   z-index: 999;
 }
 
+.skip-link {
+  position: absolute;
+  left: -200px;
+  top: 58px;
+  height: auto;
+  width: auto;
+  background-color: var(--colordiv);
+  padding: 0.25em;
+}
+
+.skip-link > a {
+  color: var(--colormain);
+}
+
+.skip-link:focus-within {
+  left: 0px;
+}
+
 .logo {
   z-index: 999;
   margin-left: 10%;

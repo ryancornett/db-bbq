@@ -48,11 +48,11 @@ main {
   height: auto;
   width: auto;
   background-color: var(--colordiv);
-  padding: 0.25em;
 }
 
 .skip-link > a {
   color: var(--colormain);
+  margin: 1em;
 }
 
 .skip-link:focus-within {
@@ -600,7 +600,7 @@ input[type=submit]:hover {
     height: 90vh;
   }
   .bg-100vh {
-    background-image: url("img/bw-pit.jpg");
+    background-image: url("img/boones.png");
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
